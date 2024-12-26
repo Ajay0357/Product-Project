@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <form th:action="@{/saveProduct}" method="post" th:object="${productModel}">
+		<h2>Product Details</h2>
+		
+        
+		
+		<label>Name : </label>
+        <input type="text" name="name" id="name" placeholder="Enter The Name" th:value="*{name}"/>
+		<p class="error" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+        <br>
+		
+        <label>Brand : </label>
+        <input type="text" name="brand" placeholder="Enter Brand Name" th:value="*{brand}"/>
+		<p class="error" th:if="${#fields.hasErrors('brand')}" th:errors="*{brand}"></p>
+        <br>
+		
+        <label>MadeIn : </label>
+        <input type="text" name="madeIn" placeholder="Enter MadeIn Country" th:value="*{madeIn}"/>
+		<p class="error" th:if="${#fields.hasErrors('madeIn')}" th:errors="*{madeIn}"></p>
+        <br>
+		
+        <label>Price : </label>
+        <input type="text" name="price" placeholder="Enter The Price" th:value="*{price}"/>
+		<p class="error" th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+        <br>
+		
+        <label>Quantity : </label>
+        <input type="text" name="quantity" placeholder="Enter The Quantity" th:value="*{quantity}"/>
+		<p class="error" th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}"></p>
+		<br>
+		
+		<label>DiscountRate : </label>
+        <input type="text" name="discountRate" placeholder="Enter The Discount" th:value="*{discountRate}"/>
+		<p class="error" th:if="${#fields.hasErrors('discountRate')}" th:errors="*{discountRate}"></p>
+		<br>
+		
+		<button type="submit">Submit</button>
+		<button type="reset">Reset</button>
+    </form>
+</body>
+</html>

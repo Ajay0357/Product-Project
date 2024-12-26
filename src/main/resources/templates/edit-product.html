@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit Form</title>
+</head>
+<body>
+    <form th:action="@{'/editbyid/' + ${id}}" th:object="${product}"  method="post">
+        <label>Name : </label>
+        <input type="text" name="name" th:field="*{name}"><br>
+
+        <label>Brand : </label>
+        <input type="text" name="brand" th:field="*{brand}"><br>
+
+        <label>Price : </label>
+        <input type="text" name="price" th:field="*{price}"><br>
+		
+		<label>MadeIn : </label>
+        <input type="text" name="madeIn" th:field="*{madeIn}"><br>
+		
+		<label>Quantity : </label>
+        <input type="text" name="quantity" th:field="*{quantity}"><br>
+		
+		<label>DiscountRate : </label>
+        <input type="text" name="discountRate" th:field="*{discountRate}"><br>
+		
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
