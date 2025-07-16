@@ -24,24 +24,6 @@ public class ProductController {
 	ProductService productService;
 	
 	
-	
-	
-	//Providing Details Of Products
-	
-	/*@GetMapping("/productform")
-	public String getProductForm()
-	{
-		return "add-product";
-	}
-	
-	/*
-	@PostMapping("/saveProduct")
-	public String setProduct(ProductModel productModel)
-	{
-		productService.saveProductDetails(productModel);
-		return "Success";
-	}*/
-	
 	@GetMapping("/productform")
 	public String getProductForm(Model model)
 	{
